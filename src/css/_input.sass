@@ -1,0 +1,47 @@
+.page
+    padding: 50px 50px
+    h2
+        margin-bottom: 50px
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+    .input-label
+        margin-top: 20px
+        position: relative
+        .birds-number
+            outline: none
+            border: 3px solid #3a2366
+            border-radius: 5px
+            padding: 10px 20px
+            color: #3a2366
+        .placeholder-label
+            position: absolute
+            pointer-events: none
+            top: 50%
+            transform: translateY(-50%)
+            left: 20px
+            transition: .5s
+            color: #3a2366
+
+.birds-number:not(:placeholder-shown)+.placeholder-label
+    top: calc( 50% - 20px )
+    background-color: #fff
+    padding: 0 10px
+
+.birds-number:focus+.placeholder-label
+    top: calc( 50% - 20px )
+    background-color: #fff
+    padding: 0 10px
+
+.send
+    border: none
+    outline: none
+    border-radius: 5px
+    padding: 10px 20px
+    text-transform: uppercase
+    background-color: #ecdf0e
+    color: #fff
+    font-weight: 700
+    margin-top: 20px
+
